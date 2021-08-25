@@ -10,10 +10,9 @@ public class TouchableItems : MonoBehaviour
     public AudioClip touchSound;
     bool firstTouch;
     //public Text txt;
-    //private int currentscore = 0;
+    //private int currentscore = 0; //Score system not in use on demo
     //private GameObject ProjectileCollaider;
 
-    //public GameObject ItemHolder;
 
     // Start is called before the first frame update
     void Start()
@@ -44,12 +43,7 @@ public class TouchableItems : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        /*if (collision.gameObject.tag == "UnCollision")
-        {
         
-        }*/
-        
-        //Check for a match with the specified name on any GameObject that collides with your GameObject
         if (collision.gameObject.name == "RightHand" || collision.gameObject.name == "LeftHand")
         {
             ChangeSprite();
